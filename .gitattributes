@@ -1,0 +1,21 @@
+# Normaliza todos os arquivos de texto para LF
+* text=auto
+
+# Força arquivos de código a usar LF internamente no Git
+*.java text eol=lf
+*.xml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Arquivos binários - nunca mexer no final de linha
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary

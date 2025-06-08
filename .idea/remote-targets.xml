@@ -2,13 +2,19 @@
 <project version="4">
   <component name="RemoteTargetsManager">
     <targets>
-      <target name="WSL" type="wsl" uuid="9f6adef5-fb28-4966-8416-1e4b32977eac">
+      <target name="WSL" type="wsl" uuid="3f54a8d9-e654-4fe8-b2ae-09271bfb88eb">
         <config>
           <option name="distributionMsId" value="Ubuntu" />
         </config>
         <ContributedStateBase type="JavaLanguageRuntime">
           <config>
-            <option name="homePath" value="/root/.jdks/openjdk-21.0.2" />
+            <option name="homePath" value="$PROJECT_DIR$/../../.jdks/openjdk-21.0.2" />
+          </config>
+        </ContributedStateBase>
+        <ContributedStateBase type="MavenRuntime">
+          <config>
+            <option name="homePath" value="/root/env/apache-maven-3.9.4" />
+            <option name="versionString" value="3.9.4" />
           </config>
         </ContributedStateBase>
       </target>
