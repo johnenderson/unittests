@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41b55c0f-7377-4cad-87cc-a8c9d9388dde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/jes/authms/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/jes/authms/InMemoryUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/jes/authms/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/jes/authms/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/jes/authms/AuthServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/jes/authms/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/jes/authms/InMemoryUserRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +57,9 @@
     "JUnit.CalculadoraTest$somar.shouldAddWhenTwoNumberIsZero.executor": "Run",
     "JUnit.CalculadoraTest$subtrair.executor": "Run",
     "JUnit.CalculadoraTest.executor": "Coverage",
+    "JUnit.InMemoryUserRepositoryTest$findById.executor": "Run",
+    "JUnit.InMemoryUserRepositoryTest$save.executor": "Run",
+    "JUnit.InMemoryUserRepositoryTest$save.shouldSaveOrder.executor": "Run",
     "JUnit.OrderServiceTest (1).executor": "Run",
     "JUnit.OrderServiceTest$getOrder.executor": "Run",
     "JUnit.OrderServiceTest$getOrder.shouldReturnOrderWhenIdExists.executor": "Run",
@@ -116,55 +114,7 @@
       <recent name="dev.jes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthServiceTest$register">
-    <configuration name="AuthServiceTest$authenticate.shouldReturnTrueWhenUserExistAndPasswordIsValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unittests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.AuthServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.AuthServiceTest$authenticate" />
-      <option name="METHOD_NAME" value="shouldReturnTrueWhenUserExistAndPasswordIsValid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServiceTest$authenticate.shouldReturnTrueWhenUserExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unittests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.AuthServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.AuthServiceTest$authenticate" />
-      <option name="METHOD_NAME" value="shouldReturnTrueWhenUserExists" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthServiceTest$authenticate.shouldReturnTrueWhenUserExistsAndPasswordIsValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unittests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.AuthServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.AuthServiceTest$authenticate" />
-      <option name="METHOD_NAME" value="shouldReturnTrueWhenUserExistsAndPasswordIsValid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists">
     <configuration name="AuthServiceTest$register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unittests" />
       <extension name="coverage">
@@ -180,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InMemoryUserRepositoryTest$findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unittests" />
       <extension name="coverage">
         <pattern>
@@ -188,20 +138,67 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.AuthServiceTest" />
+      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$findById" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unittests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.jes.authms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$findById" />
+      <option name="METHOD_NAME" value="shouldFindByIdWhenOrderExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryUserRepositoryTest$save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unittests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.jes.authms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$save" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryUserRepositoryTest$save.shouldSaveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unittests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.jes.authms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$save" />
+      <option name="METHOD_NAME" value="shouldSaveUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest$findById" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest$save" />
+        <item itemvalue="JUnit.InMemoryUserRepositoryTest$save.shouldSaveUser" />
         <item itemvalue="JUnit.AuthServiceTest$register" />
-        <item itemvalue="JUnit.AuthServiceTest$authenticate.shouldReturnTrueWhenUserExistAndPasswordIsValid" />
-        <item itemvalue="JUnit.AuthServiceTest" />
-        <item itemvalue="JUnit.AuthServiceTest$authenticate.shouldReturnTrueWhenUserExistsAndPasswordIsValid" />
-        <item itemvalue="JUnit.AuthServiceTest$authenticate.shouldReturnTrueWhenUserExists" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +219,9 @@
       <option name="presentableId" value="Default" />
       <updated>1739538957265</updated>
       <workItem from="1749400424659" duration="217000" />
-      <workItem from="1749400657456" duration="5384000" />
+      <workItem from="1749400657456" duration="8217000" />
+      <workItem from="1749510736712" duration="2164000" />
+      <workItem from="1749992560257" duration="1106000" />
     </task>
     <servers />
   </component>
