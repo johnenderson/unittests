@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41b55c0f-7377-4cad-87cc-a8c9d9388dde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/jes/authms/InMemoryUserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/jes/bankguard/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/jes/bankguard/TransactionValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/jes/bankguard/TransactionValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +61,7 @@
     "JUnit.CalculadoraTest$subtrair.executor": "Run",
     "JUnit.CalculadoraTest.executor": "Coverage",
     "JUnit.InMemoryUserRepositoryTest$findById.executor": "Run",
+    "JUnit.InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists.executor": "Run",
     "JUnit.InMemoryUserRepositoryTest$save.executor": "Run",
     "JUnit.InMemoryUserRepositoryTest$save.shouldSaveOrder.executor": "Run",
     "JUnit.OrderServiceTest (1).executor": "Run",
@@ -71,6 +75,13 @@
     "JUnit.RealOrderRepositoryTest$findById.shouldFindByIdWhenOrderExists.executor": "Run",
     "JUnit.RealOrderRepositoryTest$save.executor": "Run",
     "JUnit.RealOrderRepositoryTest.executor": "Run",
+    "JUnit.TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenFailedAttemptsIsBiggerThan3.executor": "Run",
+    "JUnit.TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenFailedAttemptsIsEqualTo3.executor": "Run",
+    "JUnit.TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenIsBiggerThan10000.executor": "Run",
+    "JUnit.TransactionValidatorTest$validateTransaction.shouldReturnManualReviewWhenIsInternationalAndValueIsBiggerThan1000.executor": "Run",
+    "JUnit.TransactionValidatorTest$validateTransaction.shouldReturnManualReviewWhenIsPixAndIsBiggerThan5000.executor": "Run",
+    "JUnit.TransactionValidatorTest$validateTransaction.shouldThrowIllegalArgumentWhenTransactionIsZero.executor": "Run",
+    "JUnit.TransactionValidatorTest.executor": "Run",
     "JUnit.UserServiceTest$getUserStatus.executor": "Run",
     "JUnit.UserServiceTest$getUserStatus.shouldReturnActiveUser.executor": "Run",
     "JUnit.UserServiceTest.executor": "Run",
@@ -96,7 +107,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.47011495",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -108,97 +119,100 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="dev.jes.bankguard" />
       <recent name="dev.jes.authms" />
       <recent name="ecommerce" />
       <recent name="dev.jes.mockito" />
       <recent name="dev.jes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists">
-    <configuration name="AuthServiceTest$register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TransactionValidatorTest">
+    <configuration name="TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenFailedAttemptsIsBiggerThan3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unittests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
+          <option name="PATTERN" value="dev.jes.bankguard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.AuthServiceTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.AuthServiceTest$register" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InMemoryUserRepositoryTest$findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unittests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$findById" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="unittests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$findById" />
-      <option name="METHOD_NAME" value="shouldFindByIdWhenOrderExists" />
+      <option name="PACKAGE_NAME" value="dev.jes.bankguard.TransactionValidatorTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.bankguard.TransactionValidatorTest$validateTransaction" />
+      <option name="METHOD_NAME" value="shouldReturnBlockedWhenFailedAttemptsIsBiggerThan3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryUserRepositoryTest$save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenIsBiggerThan10000" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unittests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
+          <option name="PATTERN" value="dev.jes.bankguard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$save" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="dev.jes.bankguard.TransactionValidatorTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.bankguard.TransactionValidatorTest$validateTransaction" />
+      <option name="METHOD_NAME" value="shouldReturnBlockedWhenIsBiggerThan10000" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryUserRepositoryTest$save.shouldSaveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TransactionValidatorTest$validateTransaction.shouldReturnManualReviewWhenIsInternationalAndValueIsBiggerThan1000" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="unittests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.jes.authms.*" />
+          <option name="PATTERN" value="dev.jes.bankguard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest" />
-      <option name="MAIN_CLASS_NAME" value="dev.jes.authms.InMemoryUserRepositoryTest$save" />
-      <option name="METHOD_NAME" value="shouldSaveUser" />
+      <option name="PACKAGE_NAME" value="dev.jes.bankguard.TransactionValidatorTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.bankguard.TransactionValidatorTest$validateTransaction" />
+      <option name="METHOD_NAME" value="shouldReturnManualReviewWhenIsInternationalAndValueIsBiggerThan1000" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionValidatorTest$validateTransaction.shouldReturnManualReviewWhenIsPixAndIsBiggerThan5000" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unittests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.jes.bankguard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.jes.bankguard.TransactionValidatorTest" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.bankguard.TransactionValidatorTest$validateTransaction" />
+      <option name="METHOD_NAME" value="shouldReturnManualReviewWhenIsPixAndIsBiggerThan5000" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="unittests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.jes.bankguard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.jes.bankguard" />
+      <option name="MAIN_CLASS_NAME" value="dev.jes.bankguard.TransactionValidatorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest$findById.shouldFindByIdWhenOrderExists" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest$findById" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest$save" />
-        <item itemvalue="JUnit.InMemoryUserRepositoryTest$save.shouldSaveUser" />
-        <item itemvalue="JUnit.AuthServiceTest$register" />
+        <item itemvalue="JUnit.TransactionValidatorTest" />
+        <item itemvalue="JUnit.TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenIsBiggerThan10000" />
+        <item itemvalue="JUnit.TransactionValidatorTest$validateTransaction.shouldReturnManualReviewWhenIsPixAndIsBiggerThan5000" />
+        <item itemvalue="JUnit.TransactionValidatorTest$validateTransaction.shouldReturnManualReviewWhenIsInternationalAndValueIsBiggerThan1000" />
+        <item itemvalue="JUnit.TransactionValidatorTest$validateTransaction.shouldReturnBlockedWhenFailedAttemptsIsBiggerThan3" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +235,7 @@
       <workItem from="1749400424659" duration="217000" />
       <workItem from="1749400657456" duration="8217000" />
       <workItem from="1749510736712" duration="2164000" />
-      <workItem from="1749992560257" duration="1106000" />
+      <workItem from="1749992560257" duration="5800000" />
     </task>
     <servers />
   </component>

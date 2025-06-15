@@ -31,6 +31,12 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
 
         <!-- Mockito -->
         <dependency>
@@ -54,6 +60,34 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.19.5</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>1.2.3</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <threads>4</threads>
+                    <mutators>
+                        <mutator>ALL</mutator>
+                    </mutators>
+                    <targetClasses>
+                        <param>dev.jes.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>dev.jes.*Test</param>
+                    </targetTests>
+                    <outputFormats>
+                        <outputFormat>HTML</outputFormat>
+                    </outputFormats>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 </project>
